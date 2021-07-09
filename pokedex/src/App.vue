@@ -1,6 +1,6 @@
 <template>
 	<div id="pokedex">
-		<h1 class="text--yellow">Pokedex DIO</h1>
+		<h1 class="text--yellow">Pokedex</h1>
 	</div>
 </template>
 
