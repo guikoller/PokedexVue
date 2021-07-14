@@ -1,29 +1,30 @@
 <template>
-  <div class="panel bg--red-04">
-      <div class="container bg--red-01">
-          <TopPanelButton v-for="(button, index) in buttons" :key="index" v-bind="button"/>
-      </div>
-  </div>
+	<div class="panel bg--red-04">
+		<div class="container bg--red-01">
+			<TopPanelButton v-for="(button, index) in buttons" :key="index" v-bind="button" />
+		</div>
+	</div>
 </template>
 
 <script>
-import TopPanelButton from './TopPanelButton.vue'
-export default {
-    name: 'TopPanel',
-    components:{
-        TopPanelButton,
-    },
-    data(){
-        return{
-            buttons:[
-                {style:{width: '50px', height: '50px'}, class: 'bg--blue-00'},
-                {style:{width: '20px', height: '20px'}, class: 'bg--red-02'},
-                {style:{width: '20px', height: '20px'}, class: 'bg--yellow'},
-                {style:{width: '20px', height: '20px'}, class: 'bg--green'},
-            ]
-        }
-    },
-};
+	import TopPanelButton from './TopPanelButton.vue';
+
+	export default {
+		name: 'TopPanel',
+		components: {
+			TopPanelButton,
+		},
+		data() {
+			return {
+				buttons: [
+					{ style: { width: '50px', height: '50px' }, class: 'bg--blue-00' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--red-02' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--yellow' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--green' },
+				],
+			};
+		},
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -32,9 +33,11 @@ export default {
 		width: 100%;
 		clip-path: polygon(0 0, 100% 0, 100% 41px, 270px 41px, 200px 100%, 0 100%);
 		z-index: 1;
+
 		@media (min-width: $viewport-medium) {
 			width: calc(50% + 20px);
 		}
+
 		.container {
 			display: flex;
 			padding: 10px;
